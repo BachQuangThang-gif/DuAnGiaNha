@@ -27,3 +27,5 @@ print(f"MSE (Sai số bình phương): {mean_squared_error(y_test, y_pred):.4f}"
 nha_moi = [[100, 3, 2]]
 gia_du_doan = model.predict(nha_moi)
 print(f"\nDự đoán giá nhà mẫu (100m2, 3 ngủ, 2 tắm): {gia_du_doan[0]:.2f} triệu VNĐ")
+print(f"Hệ số góc (Weights): {model.coef_}")
+print(f"Hệ số chặn (Bias): {model.intercept_}")
