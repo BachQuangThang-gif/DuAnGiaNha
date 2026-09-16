@@ -13,3 +13,9 @@ Dự án Machine Learning sử dụng thuật toán Hồi quy tuyến tính (Lin
    pip install pandas scikit-learn
 2. Chạy file:
    python main.py
+
+## Thí nghiệm Overfitting và Kỹ thuật Tránh Overfitting
+
+- File thực nghiệm: `overfitting_demo.py`
+- **Tạo Overfitting**: Sử dụng hồi quy đa thức bậc cao (Polynomial Features bậc 4) khiến mô hình cố khớp toàn bộ dữ liệu huấn luyện (Train R2 = 1.0 nhưng Test R2 bị âm nặng).
+- **Khắc phục**: Sử dụng chuẩn hóa `StandardScaler` kết hợp kỹ thuật điều chuẩn **Ridge Regression (L2 Regularization)** với \(\alpha = 100\) để phạt các trọng số quá lớn, giúp mô hình tổng quát hóa tốt trên tập kiểm thử (Test).
